@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+{% load crispy_forms_tags %}
+
+<h3> Restablecer Contraseña </h3>
+
+<p>¿Olvidaste tu contraseña? Ingrese su dirección de correo electrónico y a continuación
+    le enviaremos instrucciones para configurar una nueva contraseña.</p>
+
+<form method="post">
+
+    {% csrf_token %}
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                {{ form | crispy }}
+                <br>
+                <input type="Submit" name="Enviar correo electrónico" class="btn btn-dark col-lg-4">
+                
+            </div>
+            
+            
+        </div>
+    </div>
+
+
+
+</form>
+
+{% endblock %}

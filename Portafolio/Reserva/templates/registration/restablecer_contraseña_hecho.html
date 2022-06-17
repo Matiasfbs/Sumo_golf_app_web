@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+
+
+<br>
+
+<div class="container">
+
+    <h3> Contraseña restablecida </h3>
+
+    <p> Tu clave a sido actualizada. Puede volver a iniciar sesión</p>
+
+    <a href="{% url 'login' %}">
+        <button type="button" class="btn btn-info">Volver al login</button>
+    </a>
+
+</div>
+
+{% endblock %}
